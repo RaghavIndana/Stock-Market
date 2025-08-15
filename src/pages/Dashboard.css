@@ -1,0 +1,130 @@
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    background: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-sidebar {
+    width: 250px;
+    background: #1f2937;
+    color: white;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.dashboard-chart {
+    flex: 2;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chart-nav button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.chart-nav button:hover {
+    background: #1d4ed8;
+}
+
+.dashboard-stats {
+    flex: 1;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.range-container {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.range-container span {
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.range-bar {
+    flex: 1;
+    height: 6px;
+    background: #d1d5db;
+    position: relative;
+    margin: 0 0.5rem;
+    border-radius: 3px;
+}
+
+.range-indicator {
+    position: absolute;
+    top: -10px;
+    transform: translateX(-50%);
+    color: red;
+    font-size: 1rem;
+}
+
+
+
+
+
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* full height */
+  width: 100vw;  /* full width */
+  overflow: hidden;
+}
+
+.sidebar-section {
+  width: 250px;
+  flex-shrink: 0;
+  border-right: 1px solid #ddd;
+  background: #fff;
+  overflow-y: auto;
+}
+
+.main-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+
+
+
+.chart-section {
+  flex: 1;
+}
+
+
+
+
+
+
+
