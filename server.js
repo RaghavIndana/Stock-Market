@@ -3,7 +3,14 @@ import cors from "cors";
 import yahooFinance from "yahoo-finance2";
 
 const app = express();
-app.use(cors());
+// app.use(cors());
+
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
+}));
+
+
 app.use(express.json());
 
 const PORT = 5000;
