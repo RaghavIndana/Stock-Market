@@ -14,14 +14,14 @@ export default function Dashboard() {
   const [todayPrice, setTodayPrice] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/companies")
+    axios.get("https://stock-market-production-b089.up.railway.app/companies")
       .then(res => setCompanies(res.data))
       .catch(err => console.error("companies error:", err));
   }, []);
 
   const fetchStockData = async (symbol) => {
     try {
-      const res = await axios.get(`http://localhost:5000/stock/${symbol}`);
+      const res = await axios.get(`https://stock-market-production-b089.up.railway.app/stock/${symbol}`);
       if (Array.isArray(res.data)) {
         setChartData(res.data);
         setStats(null);

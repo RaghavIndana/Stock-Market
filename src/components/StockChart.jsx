@@ -36,7 +36,8 @@ export default function StockChart({ symbol, companyName }) {
 
     const fetchData = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/stock/${symbol}?period=${period}`);
+        // const res = await fetch(`https://stock-market-production-b089.up.railway.app/stock/${symbol}?period=${period}`);
+        const res = await fetch(`https://stock-market-production-b089.up.railway.app/stock/${symbol}?period=${period}`);
         const data = await res.json();
         setStockData(data.chart || []);
       } catch (err) {
@@ -55,7 +56,7 @@ export default function StockChart({ symbol, companyName }) {
     if (!symbol || period !== "1d") return;
 
     const intervalId = setInterval(() => {
-      fetch(`http://localhost:5000/stock/${symbol}?period=1d`)
+      fetch(`https://stock-market-production-b089.up.railway.app/stock/${symbol}?period=1d`)
         .then(res => res.json())
         .then(data => setStockData(data.chart || []))
         .catch(err => console.error(err));
