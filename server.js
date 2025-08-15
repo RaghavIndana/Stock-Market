@@ -13,7 +13,7 @@ app.use(cors({
 
 app.use(express.json());
 
-const PORT = 5000;
+// const PORT = 5000;
 
 // Mock company list (can later come from DB)
 const companies = [
@@ -293,6 +293,13 @@ app.get("/stock/:symbol", async (req, res) => {
 
 
 
+// app.listen(PORT, () => {
+//   console.log(`✅ Server running on http://localhost:${PORT}`);
+// });
+
+
+
+const PORT = process.env.PORT || 5000; // ✅ pick up Railway's port first
 app.listen(PORT, () => {
-  console.log(`✅ Server running on http://localhost:${PORT}`);
+  console.log(`✅ Server running on port ${PORT}`);
 });
